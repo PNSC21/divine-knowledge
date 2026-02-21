@@ -1,0 +1,258 @@
+/* GLOBAL */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    background-attachment: fixed;
+    color: #fff;
+}
+
+/* MAIN HEADER */
+
+.main-header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #f5d76e;
+}
+
+.main-header nav a {
+    margin: 10px;
+    color: #f5d76e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.main-header nav a:hover {
+    color: #fff;
+}
+
+/* CONTENT WRAPPER */
+
+.content {
+    padding: 40px 20px;
+}
+
+/* HOME CARDS */
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 22px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: #f5d76e;
+    color: #000;
+}
+
+/* CHAPTER GRID */
+
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.chapter-card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.chapter-card:hover {
+    background: #f5d76e;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* VERSE GRID */
+
+.verse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.verse-card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.verse-card:hover {
+    background: #90ee90;
+    color: #000;
+}
+
+/* VERSE DETAIL */
+
+.verse-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.shloka-box {
+    font-size: 22px;
+    color: #f5d76e;
+    line-height: 1.6;
+}
+
+/* CHAT CONTAINER */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 150px);
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* CHAT HEADER */
+
+.header {
+    padding: 15px 20px;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f5d76e;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #f5d76e;
+}
+
+.reset-link {
+    color: #90ee90;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.reset-link:hover {
+    color: #fff;
+}
+
+/* CHAT BOX */
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+/* MESSAGES */
+
+.message-box {
+    max-width: 70%;
+    padding: 14px 18px;
+    margin: 8px 0;
+    border-radius: 20px;
+    word-wrap: break-word;
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease;
+    font-size: 15px;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #2e7d32;
+    color: #fff;
+    border-bottom-right-radius: 0;
+}
+
+.krishna {
+    align-self: flex-start;
+    background-color: rgba(245, 215, 110, 0.95);
+    color: #111;
+    border-bottom-left-radius: 0;
+}
+
+.shloka {
+    font-weight: bold;
+    color: orangered;
+    margin-bottom: 6px;
+}
+
+.krishna-words {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* INPUT AREA */
+
+.input-container {
+    display: flex;
+    padding: 15px 20px;
+    background-color: #1b1b1b;
+    border-top: 2px solid #f5d76e;
+    gap: 10px;
+}
+
+.input-container textarea {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    resize: none;
+    height: 45px;
+}
+
+.input-container button {
+    padding: 12px 20px;
+    background-color: #5aab5a;
+    border-radius: 20px;
+    border: none;
+    color: #111;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.input-container button:hover {
+    background-color: #4a934a;
+    transform: scale(1.05);
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

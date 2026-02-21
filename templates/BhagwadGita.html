@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+
+    <div class="header">
+        <span>Spiritual Guidance</span>
+        <a href="/reset" class="reset-link">Reset Session</a>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+        {% for chat in chats %}
+            <div class="message-box user">
+                <strong>You:</strong> {{ chat.query }}
+            </div>
+
+            <div class="message-box krishna">
+                {% if chat.shloka %}
+                    <div class="shloka">📜 {{ chat.shloka }}</div>
+                {% endif %}
+                {% if chat.verse %}
+                    <div><strong>Meaning:</strong> {{ chat.verse }}</div>
+                {% endif %}
+                <div class="krishna-words">🕉️ {{ chat.explanation }}</div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <form method="POST" class="input-container">
+        <textarea name="query" placeholder="What troubles your soul today?" required></textarea>
+        <button type="submit">Ask</button>
+    </form>
+
+</div>
+
+<script>
+    const chatBox = document.getElementById('chatBox');
+    chatBox.scrollTop = chatBox.scrollHeight;
+</script>
+
+{% endblock %}

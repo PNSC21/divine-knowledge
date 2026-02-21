@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📜 Adhyay Catalogue</h2>
+
+<div class="chapter-grid">
+    {% for chapter in chapters %}
+        <div class="chapter-card"
+             onclick="location.href='/chapter/{{ chapter }}'">
+            Chapter {{ chapter }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

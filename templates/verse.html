@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="verse-container">
+
+    <h2>Chapter {{ verse.Chapter }} - Verse {{ verse.Verse }}</h2>
+
+    <div class="shloka-box">
+        <h3>Shloka</h3>
+        <p>{{ verse.Shloka }}</p>
+    </div>
+
+    <div class="transliteration">
+        <h3>Transliteration</h3>
+        <p>{{ verse.Transliteration }}</p>
+    </div>
+
+    <div class="meaning">
+        <h3>Hindi Meaning</h3>
+        <p>{{ verse.HinMeaning }}</p>
+
+        <h3>English Meaning</h3>
+        <p>{{ verse.EngMeaning }}</p>
+    </div>
+
+    <div class="word-meaning">
+        <h3>Word Meaning</h3>
+        <p>{{ verse.WordMeaning | safe }}</p>
+    </div>
+
+</div>
+
+{% endblock %}

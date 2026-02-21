@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📖 Chapter {{ chapter_id }}</h2>
+
+<div class="verse-grid">
+    {% for verse in verses %}
+        <div class="verse-card"
+             onclick="location.href='/chapter/{{ chapter_id }}/verse/{{ verse }}'">
+            {{ verse }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
