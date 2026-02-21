@@ -93,7 +93,7 @@ def verse(chapter_id, verse_id):
     return render_template("verse.html", verse=verse_data)
 
 @app.route("/gitagpt", methods=["GET", "POST"])
-def geetagpt():
+def gitagpt():
     geetachat()
     return render_template('BhagwadGita.html', chats=session.get('chats', []))
 
