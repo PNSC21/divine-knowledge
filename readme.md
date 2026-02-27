@@ -17,6 +17,10 @@ The Divine Knowledge Portal is a hybrid AI system that integrates structured scr
 
 It demonstrates retrieval-grounded conversational AI applied to a structured spiritual corpus.
 
+## 🖼️ GitaGPT Preview
+
+![GitaGPT](assests/images/GitaGPT.png)
+
 ---
 
 # ✨ Key Features
